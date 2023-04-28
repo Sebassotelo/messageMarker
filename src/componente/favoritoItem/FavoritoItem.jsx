@@ -107,7 +107,6 @@ function FavoritoItem({
           {prime && <img className={style.img} src={prime2.src} alt="" />}
           {suscriptor && <img className={style.img} src={sub2.src} alt="" />}
           <span style={{ color: colorTitle ? colorTitle : "" }}>{usuario}</span>
-          :
         </h3>
         <p>{mensaje}</p>
       </div>
