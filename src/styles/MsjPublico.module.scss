@@ -1,0 +1,79 @@
+@import "./Variables.module.scss";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  .card {
+    min-height: 130px;
+    width: 850px;
+    border-radius: 10px;
+    background-color: rgb(230, 222, 229);
+    padding: 10px;
+    box-shadow: rgb(38 50 56 / 16%) 0px 8px 16px,
+      rgb(0 0 0 / 30%) 0px 4px 5px -4px,
+      rgb(255 255 255 / 50%) 0px 2px 5px inset,
+      rgb(0 0 0 / 20%) 0px -1px 3px inset;
+
+    h3 {
+      margin: 0;
+      font-size: 32px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3px;
+      color: black;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+
+      .img {
+        height: 30px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: black;
+      font-weight: 600;
+      text-align: start;
+      word-break: break-all;
+    }
+  }
+
+  .card__dark {
+    min-height: 130px;
+    width: 850px;
+    border-radius: 10px;
+    background-color: $black-color;
+    padding: 10px;
+    box-shadow: rgb(38 50 56 / 16%) 0px 8px 16px,
+      rgb(0 0 0 / 30%) 0px 4px 5px -4px,
+      rgb(255 255 255 / 50%) 0px 2px 5px inset,
+      rgb(0 0 0 / 20%) 0px -1px 3px inset;
+
+    h3 {
+      margin: 0;
+      font-size: 32px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 3px;
+      color: white;
+      text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.541);
+
+      .img {
+        height: 30px;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      color: white;
+      font-weight: 600;
+      text-align: start;
+      word-break: break-all;
+    }
+  }
+}

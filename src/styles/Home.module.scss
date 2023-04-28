@@ -1,0 +1,36 @@
+@import "./Variables.module.scss";
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+
+  .header {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    .button__google {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background-color: $white-color;
+      padding: 8px;
+      border-radius: 15px;
+      cursor: pointer;
+
+      .google {
+        font-size: 26px;
+      }
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 900;
+        color: $black-color;
+      }
+    }
+  }
+}
