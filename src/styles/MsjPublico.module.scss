@@ -8,15 +8,11 @@
   justify-items: center;
 
   .card {
-    min-height: 130px;
-    width: 850px;
-    border-radius: 10px;
-    background-color: rgb(230, 222, 229);
+    min-height: 140px;
+    width: 650px;
+    background-color: rgb(241, 241, 241);
     padding: 10px;
-    box-shadow: rgb(38 50 56 / 16%) 0px 8px 16px,
-      rgb(0 0 0 / 30%) 0px 4px 5px -4px,
-      rgb(255 255 255 / 50%) 0px 2px 5px inset,
-      rgb(0 0 0 / 20%) 0px -1px 3px inset;
+    box-shadow: 8px 8px 0px 2px rgb(123, 1, 160);
 
     h3 {
       margin: 0;
@@ -43,15 +39,11 @@
   }
 
   .card__dark {
-    min-height: 130px;
-    width: 850px;
-    border-radius: 10px;
-    background-color: $black-color;
+    min-height: 140px;
+    width: 650px;
+    background-color: rgb(26, 26, 26);
     padding: 10px;
-    box-shadow: rgb(38 50 56 / 16%) 0px 8px 16px,
-      rgb(0 0 0 / 30%) 0px 4px 5px -4px,
-      rgb(255 255 255 / 50%) 0px 2px 5px inset,
-      rgb(0 0 0 / 20%) 0px -1px 3px inset;
+    box-shadow: 8px 8px 0px 2px rgb(149, 0, 194);
 
     h3 {
       margin: 0;

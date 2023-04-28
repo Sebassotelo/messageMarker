@@ -5,12 +5,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 35px;
   background-color: $black-color;
 
   .link {
     font-weight: 900;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 24px;
+    }
 
     &:hover {
       color: $white-color;

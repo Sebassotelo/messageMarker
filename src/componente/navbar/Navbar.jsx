@@ -6,6 +6,10 @@ import { push } from "next/router";
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import ContextGeneral from "@/services/ContextGeneral";
 
+import { AiOutlineHome, AiOutlineGoogle } from "react-icons/ai";
+import { MdOutlineLogout, MdOutlineManageAccounts } from "react-icons/md";
+import { BsChatLeftText } from "react-icons/bs";
+
 function Navbar() {
   const context = useContext(ContextGeneral);
   const { inspectorSesion, verificarLogin } = useContext(ContextGeneral);
@@ -20,16 +24,16 @@ function Navbar() {
   return (
     <div className={style.container}>
       <Link href="/" className={style.link}>
-        Home
+        <AiOutlineHome className={style.icon} />
       </Link>
       {context.user && (
         <Link href="/chat" className={style.link}>
-          Chat
+          <BsChatLeftText className={style.icon} style={{ fontSize: "20px" }} />
         </Link>
       )}
       {context.user && (
         <Link href="/cuenta" className={style.link}>
-          Cuenta
+          <MdOutlineManageAccounts className={style.icon} />
         </Link>
       )}
       {!context.user && (
@@ -37,7 +41,7 @@ function Navbar() {
           onClick={() => signInWithPopup(context.auth, googleProvider)}
           className={style.link}
         >
-          Ingresar con Google
+          <AiOutlineGoogle className={style.icon} />
         </p>
       )}
 
@@ -49,7 +53,7 @@ function Navbar() {
           }}
           className={style.link}
         >
-          Cerrar Sesion
+          <MdOutlineLogout className={style.icon} />
         </p>
       )}
     </div>
