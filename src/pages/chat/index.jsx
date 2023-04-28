@@ -120,7 +120,7 @@ export default function Home() {
           </h3>
           <div className={style.main}>
             <div className={style.container}>
-              <h3 className={style.h3}>Mensajes:</h3>
+              <h3 className={style.h3}>Chat:</h3>
 
               <div className={style.mensajes__container}>
                 {context.mensajesPublico &&
