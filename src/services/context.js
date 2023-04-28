@@ -59,7 +59,7 @@ function Context(props) {
       setMensajeElegido(infoDocu.mensajeFijado);
       setCanal(infoDocu.canal);
       setIdCuenta(infoDocu.idCuenta);
-      setLink(`http://localhost:3000/m/${infoDocu.idCuenta}`);
+      setLink(`https://message-marker.vercel.app/m/${infoDocu.idCuenta}`);
       setDarkMode(infoDocu.darkMode);
       setComando(infoDocu.comando);
       setLoader(true);
@@ -78,7 +78,7 @@ function Context(props) {
       setCanal(infoDocu.canal);
       setIdCuenta(infoDocu.idCuenta);
       setComando(infoDocu.comando);
-      setLink(`http://localhost:3000/m/${infoDocu.idCuenta}`);
+      setLink(`https://message-marker.vercel.app/m/${infoDocu.idCuenta}`);
       setDarkMode(infoDocu.darkMode);
       setLoader(true);
 
