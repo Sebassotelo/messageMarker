@@ -62,7 +62,6 @@ function Msj({
             <img className={style.img} src={sub2.src} alt="" />
           )}{" "}
           <span style={{ color: colorTitle ? colorTitle : "" }}>{usuario}</span>
-          :
         </h3>
         <p>{mensaje}</p>
       </div>

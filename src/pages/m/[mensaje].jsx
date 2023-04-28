@@ -81,7 +81,6 @@ function Mensaje() {
                 <span style={{ color: sms.colorTitle ? sms.colorTitle : "" }}>
                   {sms.usuario}
                 </span>{" "}
-                :
               </h3>
               <p>{sms.mensaje}</p>
             </>
