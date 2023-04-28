@@ -61,6 +61,7 @@ function Mensaje() {
         setDark(docSnapshot.data().darkMode);
       });
     }
+    console.log(context.mensajeElegido);
   }, [router.query.mensaje, email]);
 
   return (

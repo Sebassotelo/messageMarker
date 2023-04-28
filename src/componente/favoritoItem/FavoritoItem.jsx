@@ -95,7 +95,9 @@ function FavoritoItem({
     <div
       className={style.container}
       style={{
-        backgroundColor: favElegido ? "#f2ced1" : "rgb(238, 238, 238)",
+        backgroundColor: favElegido
+          ? "rgb(208, 177, 218)"
+          : "rgb(238, 238, 238)",
       }}
     >
       <div className={style.mensaje}>
@@ -110,7 +112,10 @@ function FavoritoItem({
         <p>{mensaje}</p>
       </div>
       <div className={style.container__icon}>
-        <MdOutlineDeleteForever onClick={eliminarFav} className={style.icon} />
+        <MdOutlineDeleteForever
+          onClick={eliminarFav}
+          className={style.delete}
+        />
 
         {favElegido ? (
           <FaRegEye onClick={deleteMsj} className={style.icon} />
