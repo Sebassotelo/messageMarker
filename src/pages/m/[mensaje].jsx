@@ -17,6 +17,8 @@ import mod from "../../media/mod.png";
 import sub from "../../media/sub.png";
 import prime from "../../media/prime.png";
 
+import { motion } from "framer-motion";
+
 function Mensaje() {
   const router = useRouter();
   const [sms, setSms] = useState({});
@@ -50,51 +52,130 @@ function Mensaje() {
         setDark(docSnapshot.data().darkMode);
       });
     }
-    console.log(context.mensajeElegido);
   }, [router.query.mensaje, email]);
 
   return (
     <div className={style.container}>
       {!dark ? (
-        <div className={style.card}>
-          {context.mensajeElegido && (
-            <>
-              <h3>
-                {sms.mod && <img className={style.img} src={mod.src} alt="" />}
-                {sms.prime && (
-                  <img className={style.img} src={prime.src} alt="" />
-                )}
-                {sms.suscriptor && (
-                  <img className={style.img} src={sub.src} alt="" />
-                )}
-                <span style={{ color: sms.colorTitle ? sms.colorTitle : "" }}>
-                  {sms.usuario}
-                </span>{" "}
-              </h3>
-              <p>{sms.mensaje}</p>
-            </>
+        <>
+          {sms.mensaje ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className={style.card}>
+                <>
+                  <h3>
+                    {sms.mod && (
+                      <img className={style.img} src={mod.src} alt="" />
+                    )}
+                    {sms.prime && (
+                      <img className={style.img} src={prime.src} alt="" />
+                    )}
+                    {sms.suscriptor && (
+                      <img className={style.img} src={sub.src} alt="" />
+                    )}
+                    <span
+                      style={{ color: sms.colorTitle ? sms.colorTitle : "" }}
+                    >
+                      {sms.usuario}
+                    </span>{" "}
+                  </h3>
+                  <p>{sms.mensaje}</p>
+                </>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className={style.card}>
+                <>
+                  <h3>
+                    {sms.mod && (
+                      <img className={style.img} src={mod.src} alt="" />
+                    )}
+                    {sms.prime && (
+                      <img className={style.img} src={prime.src} alt="" />
+                    )}
+                    {sms.suscriptor && (
+                      <img className={style.img} src={sub.src} alt="" />
+                    )}
+                    <span
+                      style={{ color: sms.colorTitle ? sms.colorTitle : "" }}
+                    >
+                      {sms.usuario}
+                    </span>{" "}
+                  </h3>
+                  <p>{sms.mensaje}</p>
+                </>
+              </div>
+            </motion.div>
           )}
-        </div>
+        </>
       ) : (
-        <div className={style.card__dark}>
-          {context.mensajeElegido && (
-            <>
-              <h3>
-                {sms.mod && <img className={style.img} src={mod.src} alt="" />}
-                {sms.prime && (
-                  <img className={style.img} src={prime.src} alt="" />
-                )}
-                {sms.suscriptor && (
-                  <img className={style.img} src={sub.src} alt="" />
-                )}
-                <span style={{ color: sms.colorTitle ? sms.colorTitle : "" }}>
-                  {sms.usuario}
-                </span>{" "}
-              </h3>
-              <p>{sms.mensaje}</p>
-            </>
+        <>
+          {sms.mensaje ? (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className={style.card__dark}>
+                <>
+                  <h3>
+                    {sms.mod && (
+                      <img className={style.img} src={mod.src} alt="" />
+                    )}
+                    {sms.prime && (
+                      <img className={style.img} src={prime.src} alt="" />
+                    )}
+                    {sms.suscriptor && (
+                      <img className={style.img} src={sub.src} alt="" />
+                    )}
+                    <span
+                      style={{ color: sms.colorTitle ? sms.colorTitle : "" }}
+                    >
+                      {sms.usuario}
+                    </span>{" "}
+                  </h3>
+                  <p>{sms.mensaje}</p>
+                </>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className={style.card__dark}>
+                <>
+                  <h3>
+                    {sms.mod && (
+                      <img className={style.img} src={mod.src} alt="" />
+                    )}
+                    {sms.prime && (
+                      <img className={style.img} src={prime.src} alt="" />
+                    )}
+                    {sms.suscriptor && (
+                      <img className={style.img} src={sub.src} alt="" />
+                    )}
+                    <span
+                      style={{ color: sms.colorTitle ? sms.colorTitle : "" }}
+                    >
+                      {sms.usuario}
+                    </span>{" "}
+                  </h3>
+                  <p>{sms.mensaje}</p>
+                </>
+              </div>
+            </motion.div>
           )}
-        </div>
+        </>
       )}
     </div>
   );
