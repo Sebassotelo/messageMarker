@@ -10,6 +10,7 @@ import Loader from "@/componente/loader/Loader";
 import { push } from "next/router";
 
 import { toast } from "sonner";
+import Link from "next/link";
 
 export default function Home() {
   const context = useContext(ContextGeneral);
@@ -116,10 +117,6 @@ export default function Home() {
     if (context.user && !context.mensajesPublicos) {
       buscarOCrearUsuario();
     }
-
-    if (!context.canal) {
-      push("/cuenta");
-    }
   }, [context.user]);
   return (
     <>
@@ -134,7 +131,13 @@ export default function Home() {
           <div className={style.main}>
             <div className={style.container}>
               <h3 className={style.h3}>
-                Chat: [{context.canal && context.canal}]
+                Chat: [
+                {context.canal ? (
+                  context.canal
+                ) : (
+                  <Link href="/cuenta">Ingrese un canal de Twitch</Link>
+                )}
+                ]
               </h3>
 
               <div className={style.mensajes__container}>
