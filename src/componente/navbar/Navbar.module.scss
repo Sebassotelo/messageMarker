@@ -8,6 +8,25 @@
   gap: 35px;
   background-color: $black-color;
 
+  .logo {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 900;
+    }
+  }
+
   .link {
     font-weight: 900;
     cursor: pointer;
@@ -21,6 +40,26 @@
 
     &:hover {
       color: $white-color;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .logo {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      display: none;
+    }
+
+    p {
+      display: none;
     }
   }
 }

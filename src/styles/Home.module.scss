@@ -4,32 +4,132 @@
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
+  background-color: #e099ff;
+  background-image: radial-gradient(
+      at 57% 3%,
+      hsla(289, 46%, 49%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 51% 16%, hsla(129, 0%, 100%, 1) 0px, transparent 50%),
+    radial-gradient(at 98% 43%, hsla(292, 98%, 64%, 1) 0px, transparent 50%),
+    radial-gradient(at 28% 20%, hsla(82, 0%, 100%, 1) 0px, transparent 50%),
+    radial-gradient(at 63% 1%, hsla(285, 65%, 77%, 1) 0px, transparent 50%),
+    radial-gradient(at 78% 24%, hsla(233, 95%, 71%, 1) 0px, transparent 50%),
+    radial-gradient(at 83% 51%, hsla(281, 89%, 61%, 1) 0px, transparent 50%);
 
   .header {
     height: 90vh;
-    width: 100%;
-    display: grid;
+    width: 70%;
+    display: flex;
+    flex-wrap: w;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
+    color: $black-color;
+    gap: 35px;
+    .p {
+      font-size: 18px;
+      font-weight: 400;
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      .icon {
+        font-size: 64px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 42px;
+      }
+    }
 
     .button__google {
+      width: 200px;
       display: flex;
       align-items: center;
       gap: 8px;
-      background-color: $white-color;
+      background-color: white;
       padding: 8px;
       border-radius: 15px;
       cursor: pointer;
+      margin-top: 15px;
 
       .google {
-        font-size: 26px;
+        font-size: 18px;
       }
 
       p {
         margin: 0;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 900;
         color: $black-color;
+      }
+    }
+    .img {
+      img {
+        height: 500px;
+        filter: opacity(0.7);
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    .header {
+      height: 90vh;
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $black-color;
+      gap: 35px;
+      .p {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .logo {
+        justify-content: center;
+        .icon {
+          font-size: 42px;
+        }
+
+        h1 {
+          margin: 0;
+          font-size: 32px;
+        }
+      }
+
+      .button__google {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .google {
+          font-size: 18px;
+        }
+
+        p {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 900;
+          color: $black-color;
+        }
+      }
+      .img {
+        display: none;
       }
     }
   }

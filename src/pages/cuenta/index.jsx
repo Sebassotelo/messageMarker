@@ -100,7 +100,10 @@ function Index() {
             </div>
             <div className={style.canal}>
               <p>
-                Canal Activo: <span>{context.canal && context.canal}</span>
+                Canal Activo:{" "}
+                <span>
+                  {context.canal ? context.canal : "Ingrese un canal de Twitch"}
+                </span>
               </p>
             </div>
 
@@ -127,9 +130,11 @@ function Index() {
                 />
               </div>
             )}
-            <p className={style.link} onClick={copyLink}>
-              <span>Link:</span> {context.link}
-            </p>
+            {context.canal && (
+              <p className={style.link} onClick={copyLink}>
+                <span>Link:</span> {context.link}
+              </p>
+            )}
 
             <div className={style.dark__mode}>
               <p>Dark Mode del Mensaje:</p>

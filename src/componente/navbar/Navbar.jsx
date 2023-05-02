@@ -8,7 +8,7 @@ import ContextGeneral from "@/services/ContextGeneral";
 
 import { AiOutlineHome, AiOutlineGoogle } from "react-icons/ai";
 import { MdOutlineLogout, MdOutlineManageAccounts } from "react-icons/md";
-import { BsChatLeftText } from "react-icons/bs";
+import { BsChatLeftText, BsChatRightHeart } from "react-icons/bs";
 
 function Navbar() {
   const context = useContext(ContextGeneral);
@@ -23,6 +23,10 @@ function Navbar() {
 
   return (
     <div className={style.container}>
+      <div className={style.logo}>
+        <BsChatRightHeart className={style.icon} /> <p>MessageMarker</p>
+      </div>
+
       <Link href="/" className={style.link}>
         <AiOutlineHome className={style.icon} />
       </Link>

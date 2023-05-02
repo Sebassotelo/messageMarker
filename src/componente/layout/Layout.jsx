@@ -14,10 +14,10 @@ function Layout({ children, title }) {
   return (
     <div style={{ display: "grid" }}>
       <Head>
-        <title>Guarda Tu mensaje | Home</title>
+        <title>Message Marker | Home </title>
         <meta
           name="description"
-          content="SrasMedias 🧦 |  🛸 E S T A M O S EN EL F U T U R O"
+          content="Marca los mensajes de un canal de Twitch como Favoritos, y luego muestralos en tu Stream mediante un enlace."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

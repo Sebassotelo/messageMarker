@@ -1,11 +1,13 @@
 import style from "@/styles/Chat.module.scss";
 import tmi from "tmi.js";
 import { useContext, useEffect, useState } from "react";
+import Head from "next/head";
 
 import MensajeItem from "../../componente/mensajeItem/MensajeItem";
 import FavoritoItem from "../../componente/favoritoItem/FavoritoItem";
 import ContextGeneral from "@/services/ContextGeneral";
 import Loader from "@/componente/loader/Loader";
+import { push } from "next/router";
 
 import { toast } from "sonner";
 
@@ -57,7 +59,11 @@ export default function Home() {
 
           // Si el mensaje no está en la lista, agregarlo al principio
           if (!encontrado) {
-            return [msj, ...items];
+            const newItems = [msj, ...items];
+            if (newItems.length > 50) {
+              newItems.pop();
+            }
+            return newItems;
           }
 
           // Si el mensaje ya está en la lista, devolver la lista sin cambios
@@ -110,9 +116,16 @@ export default function Home() {
     if (context.user && !context.mensajesPublicos) {
       buscarOCrearUsuario();
     }
+
+    if (!context.canal) {
+      push("/cuenta");
+    }
   }, [context.user]);
   return (
     <>
+      <Head>
+        <title>Message Marker | {context.canal && context.canal} </title>
+      </Head>
       {context.loader ? (
         <div className={style.container__main}>
           <h3 className={style.link} onClick={copyLink}>
@@ -120,7 +133,9 @@ export default function Home() {
           </h3>
           <div className={style.main}>
             <div className={style.container}>
-              <h3 className={style.h3}>Chat:</h3>
+              <h3 className={style.h3}>
+                Chat: [{context.canal && context.canal}]
+              </h3>
 
               <div className={style.mensajes__container}>
                 {context.mensajesPublico &&

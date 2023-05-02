@@ -37,17 +37,6 @@ function Mensaje() {
       setDark(doc.data().darkMode);
       setEmail(doc.data().email);
     });
-
-    // comoQuieras.forEach((doc) => (busqueda = doc.data()));
-    // if (busqueda) {
-    //   setExiste(true);
-    //   setLoader(true);
-    // } else {
-    //   setExiste(false);
-    //   setLoader(true);
-    // }
-
-    // setLoader(true);
   };
 
   useEffect(() => {
