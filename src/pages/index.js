@@ -25,6 +25,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+            className={style.title}
           >
             <div className={style.logo}>
               <BsChatRightHeart className={style.icon} />
@@ -56,7 +57,16 @@ export default function Home() {
           </motion.div>
 
           <div className={style.img}>
-            <img src="https://i.imgur.com/Z8L2xdT.png" alt="" />
+            <iframe
+              width="100%"
+              height="315"
+              src="https://www.youtube.com/embed/GLjYvH5PF2s?rel=0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              className=""
+              allowfullscreen
+            />
           </div>
         </header>
 
