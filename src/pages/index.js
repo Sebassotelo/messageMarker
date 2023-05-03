@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import { BsChatRightHeart } from "react-icons/bs";
 
 import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import Card from "@/componente/card/Card";
 export default function Home() {
   const context = useContext(ContextGeneral);
   const { inspectorSesion, verificarLogin } = useContext(ContextGeneral);
@@ -29,6 +30,12 @@ export default function Home() {
               <BsChatRightHeart className={style.icon} />
               <h1>MessageMarker</h1>
             </div>
+            <h3 className={style.pregunta}>
+              ¿Quieres que tu chat te haga{" "}
+              <span style={{ color: "rgb(123, 1, 160)" }}>preguntas</span> y
+              mostrarlas en{" "}
+              <span style={{ color: "rgb(123, 1, 160)" }}>stream</span>?
+            </h3>
             <p className={style.p}>
               <span>MessageMarker</span> es una herramienta para seleccionar y
               marcar mensajes de un canal de{" "}
@@ -52,6 +59,28 @@ export default function Home() {
             <img src="https://i.imgur.com/Z8L2xdT.png" alt="" />
           </div>
         </header>
+
+        <section className={style.cards}>
+          <Card
+            orden={"1"}
+            titulo={"Crea la Cuenta"}
+            desc={"Ingresa con Google"}
+          />
+          <Card
+            orden={"2"}
+            titulo={"Configurala"}
+            desc={
+              "Elige el canal que quieras. Esto te dara un enlace. Agrega ese enlace al OBS mediante una fuente de NAVEGADOR"
+            }
+          />
+          <Card
+            orden={"3"}
+            titulo={"Chat en Vivo"}
+            desc={
+              "Ve tu chat en vivo, selecciona los mensajes favoritos y muestralos uno por uno en el enlace."
+            }
+          />
+        </section>
       </main>
     </>
   );

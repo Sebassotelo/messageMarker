@@ -1,0 +1,49 @@
+@import "../../styles/Variables.module.scss";
+
+.container {
+  background-color: white;
+  box-shadow: 8px 8px 0px 2px rgb(123, 1, 160);
+  height: 250px;
+  width: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+
+  text-align: center;
+
+  .numero {
+    position: absolute;
+    background-color: $twitch-color;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    top: -35px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    .numero__p {
+      font-weight: 900;
+      font-size: 32px;
+      color: white;
+    }
+  }
+
+  .h3 {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    font-size: 30px;
+    color: $black-color;
+    height: 50px;
+  }
+
+  p {
+    font-size: 16px;
+    color: $black-color;
+    font-weight: 500;
+  }
+}

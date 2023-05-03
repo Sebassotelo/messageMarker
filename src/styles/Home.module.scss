@@ -1,9 +1,10 @@
 @import "./Variables.module.scss";
 .main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
   background-color: #e099ff;
   background-image: radial-gradient(
       at 57% 3%,
@@ -18,7 +19,7 @@
     radial-gradient(at 83% 51%, hsla(281, 89%, 61%, 1) 0px, transparent 50%);
 
   .header {
-    height: 90vh;
+    height: 100vh;
     width: 70%;
     display: flex;
     flex-wrap: w;
@@ -26,6 +27,11 @@
     align-items: center;
     color: $black-color;
     gap: 35px;
+
+    .pregunta {
+      font-family: $fuente3;
+      font-size: 42px;
+    }
     .p {
       font-size: 18px;
       font-weight: 400;
@@ -43,7 +49,7 @@
       margin-bottom: 15px;
 
       .icon {
-        font-size: 64px;
+        font-size: 82px;
       }
 
       h1 {
@@ -81,6 +87,17 @@
       }
     }
   }
+
+  .cards {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 15px;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -93,6 +110,13 @@
       align-items: center;
       color: $black-color;
       gap: 35px;
+
+      .pregunta {
+        font-family: $fuente3;
+        font-size: 32px;
+        text-align: center;
+      }
+
       .p {
         font-size: 18px;
         font-weight: 400;
